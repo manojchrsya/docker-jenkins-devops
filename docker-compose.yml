@@ -1,0 +1,26 @@
+version: '3'
+services:
+
+  jenkins:
+    build: ./jenkins
+    container_name: jenkins
+    environment:
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    volumes:
+      - ./data/jenkins:/usr/share/elasticsearch/data
+      - ./data/jenkins/docker-certs:/certs/client
+      - ./data/jenkins/data:/var/jenkins_home
+    ports:
+      - 8080:8080
+
+  node_1:
+    build: ./
+    container_name: node_1
+    environment:
+      - NODE_ENV=dev
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    ports:
+      - 4000:4000

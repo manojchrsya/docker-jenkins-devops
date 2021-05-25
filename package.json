@@ -1,0 +1,24 @@
+{
+  "name": "docker-jenkins-devops",
+  "version": "1.0.0",
+  "description": "Deploy code through Jenkins in docker containers",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "npm start",
+    "nodemon": "nodemon --watch src src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manojchrsya/docker-jenkins-devops.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manojchrsya/docker-jenkins-devops/issues"
+  },
+  "homepage": "https://github.com/manojchrsya/docker-jenkins-devops#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
