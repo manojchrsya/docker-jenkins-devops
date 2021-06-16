@@ -10,4 +10,6 @@ RUN git init
 
 RUN npm install
 
-RUN npm run nodemon;
+USER root
+
+ENTRYPOINT ["sh", "./entrypoint.sh"]
